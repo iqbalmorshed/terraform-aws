@@ -53,3 +53,10 @@ variable "ssh_public_key_path" {
   type        = string
   default     = "~/.ssh/aws_rsa.pub"
 }
+
+# SSH Private Key Path (for reference in outputs)
+variable "ssh_private_key_path" {
+  description = "Path to SSH private key file"
+  type        = string
+  default     = "~/.ssh/aws_rsa.pem"
+}

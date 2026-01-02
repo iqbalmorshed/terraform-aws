@@ -62,10 +62,10 @@ output "instance_2_private_ip" {
 # SSH Connection Commands
 output "ssh_command_instance_1" {
   description = "SSH command for instance 1"
-  value       = "ssh -i ~/.ssh/aws_rsa ubuntu@${aws_instance.web_1.public_ip}"
+  value       = "ssh -i ~/.ssh/aws_rsa.pem ubuntu@${aws_instance.web_1.public_ip}"
 }
 
 output "ssh_command_instance_2" {
   description = "SSH command for instance 2"
-  value       = "ssh -i ~/.ssh/aws_rsa ubuntu@${aws_instance.web_2.public_ip}"
+  value       = "ssh -i ~/.ssh/aws_rsa.pem ubuntu@${aws_instance.web_2.public_ip}"
 }

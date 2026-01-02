@@ -113,7 +113,7 @@ resource "aws_security_group" "ssh_access" {
 # Create AWS Key Pair from local SSH public key
 resource "aws_key_pair" "main" {
   key_name   = "${var.project_name}-key"
-  public_key = file(var.ssh_public_key_path)
+  public_key = file(pathexpand(var.ssh_public_key_path))
 
   tags = {
     Name = "${var.project_name}-key"
