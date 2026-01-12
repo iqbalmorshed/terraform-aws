@@ -19,16 +19,16 @@ variable "vpc_cidr" {
   default     = "10.0.0.0/16"
 }
 
-# Public Subnet 1 CIDR
-variable "public_subnet_1_cidr" {
-  description = "CIDR block for public subnet 1"
+# Public Subnet CIDR
+variable "public_subnet_cidr" {
+  description = "CIDR block for public subnet"
   type        = string
   default     = "10.0.1.0/24"
 }
 
-# Public Subnet 2 CIDR
-variable "public_subnet_2_cidr" {
-  description = "CIDR block for public subnet 2"
+# Private Subnet CIDR
+variable "private_subnet_cidr" {
+  description = "CIDR block for private subnet"
   type        = string
   default     = "10.0.2.0/24"
 }
